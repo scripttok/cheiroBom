@@ -1,0 +1,213 @@
+/* src/styles/App.css */
+body {
+  font-family: "Poppins", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topo-header {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header,
+footer {
+  background-color: #e3e3e7;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.category-filter {
+  margin-bottom: 20px;
+}
+
+.category-filter button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #101316;
+  color: white;
+  cursor: pointer;
+}
+
+.category-filter button:hover {
+  background-color: #e905d64d;
+}
+
+.cart {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+.cart button:hover {
+  background-color: #c82333;
+}
+
+/* Estilos para o carrossel */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.carousel .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.carousel .magnifier {
+  position: absolute;
+  width: 100px; /* Tamanho da lupa */
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #007bff; /* Borda azul como na Sephora */
+  background-color: rgba(255, 255, 255, 0.3); /* Fundo semi-transparente */
+  pointer-events: none; /* Evita que a lupa interfira nos eventos do mouse */
+  z-index: 10;
+  background-repeat: no-repeat;
+  visibility: hidden; /* Escondida por padrão */
+}
+
+.carousel .image-container:hover .magnifier {
+  visibility: visible; /* Aparece ao passar o mouse */
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.171);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1; /* Garante que os botões fiquem acima da imagem ampliada */
+}
+
+/* Posiciona os botões nas laterais */
+.carousel button:first-child {
+  left: 5px; /* Botão "anterior" à esquerda */
+}
+
+.carousel button:last-child {
+  right: 5px; /* Botão "próximo" à direita */
+}
+
+.slick-slide img {
+  border: 5px solid transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.slick-slide img:hover {
+  border: 5px solid #007bff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #007bff;
+}
+
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #25d366; /* Verde do WhatsApp */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  background-color: #20b956; /* Tom mais escuro ao passar o mouse */
+}
+
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #c00; /* Azul, consistente com o filtro de categoria */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #7c0303; /* Tom mais escuro ao passar o mouse */
+  transform: scale(1.05); /* Leve ampliação no hover */
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.95); /* Efeito de "pressione" ao clicar */
+}
