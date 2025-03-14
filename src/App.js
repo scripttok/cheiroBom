@@ -46,6 +46,10 @@ const App = () => {
         category: "Feminino",
         price: 999,
         image: [femum, femdois],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 2,
@@ -53,6 +57,10 @@ const App = () => {
         category: "Feminino",
         price: 645,
         image: [femdois],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 3,
@@ -60,6 +68,10 @@ const App = () => {
         category: "Feminino",
         price: 499,
         image: [femtrez],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 4,
@@ -67,6 +79,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femquatro],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 5,
@@ -74,6 +90,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femcinco],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 6,
@@ -81,6 +101,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femseis],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 7,
@@ -88,6 +112,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femsete],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 8,
@@ -95,6 +123,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femoito],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 9,
@@ -102,6 +134,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femnove],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 10,
@@ -109,6 +145,11 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femdez],
+
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 11,
@@ -116,6 +157,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femonze],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 12,
@@ -123,6 +168,10 @@ const App = () => {
         category: "Feminino",
         price: 599,
         image: [femdoze],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
 
       {
@@ -131,6 +180,11 @@ const App = () => {
         category: "Masculino",
         price: 799,
         image: [masum],
+
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 14,
@@ -138,6 +192,10 @@ const App = () => {
         category: "Masculino",
         price: 599,
         image: [masdois],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 15,
@@ -145,6 +203,10 @@ const App = () => {
         category: "Masculino",
         price: 599,
         image: [mastrez],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 16,
@@ -152,6 +214,10 @@ const App = () => {
         category: "Masculino",
         price: 599,
         image: [masquatro],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 17,
@@ -159,6 +225,10 @@ const App = () => {
         category: "Masculino",
         price: 699,
         image: [mascinco],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 18,
@@ -166,6 +236,10 @@ const App = () => {
         category: "Masculino",
         price: 619,
         image: [masseis],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 19,
@@ -173,6 +247,10 @@ const App = () => {
         category: "Masculino",
         price: 619,
         image: [massete],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 20,
@@ -180,6 +258,10 @@ const App = () => {
         category: "Masculino",
         price: 619,
         image: [masoito],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 21,
@@ -187,6 +269,10 @@ const App = () => {
         category: "Masculino",
         price: 619,
         image: [masnove],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 22,
@@ -194,6 +280,11 @@ const App = () => {
         category: "Masculino",
         price: 619,
         image: [masdez],
+
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 23,
@@ -201,6 +292,10 @@ const App = () => {
         category: "Masculino",
         price: 619,
         image: [masonze],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
       {
         id: 24,
@@ -208,13 +303,25 @@ const App = () => {
         category: "Masculino",
         price: 619,
         image: [masdoze],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 60 },
+        ],
       },
     ];
     setProducts(sampleProducts);
   }, []);
 
-  const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
+  const addToCart = (product, selectedSize) => {
+    const selectedVariant = product.variants.find(
+      (v) => v.size === selectedSize
+    );
+    const cartProduct = {
+      ...product,
+      selectedSize: selectedSize,
+      price: selectedVariant.price,
+    };
+    setCartItems([...cartItems, cartProduct]);
   };
 
   const removeFromCart = (id) => {

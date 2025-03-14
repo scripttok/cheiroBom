@@ -4,6 +4,7 @@ const ProductItem = ({ product, addToCart }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [magnifierPos, setMagnifierPos] = useState({ x: 0, y: 0 });
   const [showMagnifier, setShowMagnifier] = useState(false);
+  const [selectedSize, setSelectedSize] = useState(product.variants[0].size); // Tamanho padrão
   const magnifierRef = useRef(null);
 
   const nextImage = () => {
@@ -17,24 +18,6 @@ const ProductItem = ({ product, addToCart }) => {
       prevIndex === 0 ? product.image.length - 1 : prevIndex - 1
     );
   };
-
-  if (
-    !product.image ||
-    !Array.isArray(product.image) ||
-    product.image.length === 0
-  ) {
-    return (
-      <div className="product-item">
-        <p>Imagem não disponível</p>
-        <h3>{product.name}</h3>
-        <p>{product.category}</p>
-        <p>R$ {product.price.toFixed(2)}</p>
-        <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
-          Adicionar ao Carrinho
-        </button>
-      </div>
-    );
-  }
 
   const handleMouseMove = (e) => {
     const rect = e.target.getBoundingClientRect();
@@ -59,6 +42,37 @@ const ProductItem = ({ product, addToCart }) => {
 
   const handleMouseEnter = () => setShowMagnifier(true);
   const handleMouseLeave = () => setShowMagnifier(false);
+
+  const handleAddToCart = () => {
+    addToCart(product, selectedSize);
+  };
+
+  if (
+    !product.image ||
+    !Array.isArray(product.image) ||
+    product.image.length === 0
+  ) {
+    return (
+      <div className="product-item">
+        <p>Imagem não disponível</p>
+        <h3>{product.name}</h3>
+        <p>{product.category}</p>
+        <select
+          value={selectedSize}
+          onChange={(e) => setSelectedSize(e.target.value)}
+        >
+          {product.variants.map((variant) => (
+            <option key={variant.size} value={variant.size}>
+              {variant.size} - R${variant.price.toFixed(2)}
+            </option>
+          ))}
+        </select>
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="product-item">
@@ -88,8 +102,17 @@ const ProductItem = ({ product, addToCart }) => {
       </div>
       <h3>{product.name}</h3>
       <p>{product.category}</p>
-      <p>R$ {product.price.toFixed(2)}</p>
-      <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
+      <select
+        value={selectedSize}
+        onChange={(e) => setSelectedSize(e.target.value)}
+      >
+        {product.variants.map((variant) => (
+          <option key={variant.size} value={variant.size}>
+            {variant.size} - R${variant.price.toFixed(2)}
+          </option>
+        ))}
+      </select>
+      <button className="add-to-cart-btn" onClick={handleAddToCart}>
         Adicionar ao Carrinho
       </button>
     </div>

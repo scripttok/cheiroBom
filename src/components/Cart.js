@@ -5,12 +5,13 @@ const Cart = ({ cartItems, removeFromCart }) => {
 
   const phoneNumber = "5511976488741";
 
-  // Criar a lista formatada dos itens
   const itemsList = cartItems
-    .map((item) => `- ${item.name} - R$ ${item.price.toFixed(2)}`)
+    .map(
+      (item) =>
+        `- ${item.name} (${item.selectedSize}) - R$ ${item.price.toFixed(2)}`
+    )
     .join("\n");
 
-  // Montar a mensagem completa com a lista e o total
   const message = `Olá !! Estou interessado nesses produtos, pode me ajudar a finalizar esta compra?\n\n${itemsList}\n\nTotal: R$ ${total.toFixed(
     2
   )}`;
@@ -24,8 +25,8 @@ const Cart = ({ cartItems, removeFromCart }) => {
       <h2>Carrinho</h2>
       <ul>
         {cartItems.map((item) => (
-          <li key={item.id}>
-            {item.name} - R$ {item.price.toFixed(2)}
+          <li key={`${item.id}-${item.selectedSize}`}>
+            {item.name} ({item.selectedSize}) - R$ {item.price.toFixed(2)}
             <button onClick={() => removeFromCart(item.id)}>Remover</button>
           </li>
         ))}
