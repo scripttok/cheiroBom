@@ -5,7 +5,16 @@ const ProductList = ({ products, addToCart }) => {
   return (
     <div className="product-list">
       {products.map((product) => (
-        <ProductItem key={product.id} product={product} addToCart={addToCart} />
+        <ProductItem
+          key={product.id}
+          product={{
+            ...product,
+            images: Array.isArray(product.images)
+              ? product.images
+              : [product.image || product.images || ""].filter(Boolean),
+          }}
+          addToCart={addToCart}
+        />
       ))}
     </div>
   );

@@ -29,6 +29,26 @@ import masnove from "./screen/masnove.jpg";
 import masdez from "./screen/masdez.jpg";
 import masonze from "./screen/masonze.jpg";
 import masdoze from "./screen/masdoze.jpg";
+import femdezesseis from "./screen/femdezesseis.jpg";
+import femquize from "./screen/femquize.jpg";
+import cinquentaml from "./screen/cinquentaml.jpg";
+import cemml from "./screen/cemml.jpg";
+
+import azzaromas from "./screen/azzaromas.jpg";
+import badboymas from "./screen/badboymas.jpg";
+import goodgirlfem from "./screen/goodgirlfem.jpg";
+import jeanpaulmas from "./screen/jeanpaulmas.jpg";
+import jomalonefem from "./screen/jomalonefem.jpg";
+import linterditofem from "./screen/linterditofem.jpg";
+import mywayfem from "./screen/mywayfem.jpg";
+import phantommas from "./screen/phantommas.jpg";
+import polomasc from "./screen/polomasc.jpg";
+import tandtvipfem from "./screen/tandtvipfem.jpg";
+import tomfordmas from "./screen/tomfordmas.jpg";
+import silvermas from "./screen/silvermas.jpg";
+import bleumas from "./screen/bleumas.jpg";
+import dolcemas from "./screen/dolcemas.jpg";
+import poloverde from "./screen/poloverde.jpg";
 
 import "./styles/App.css";
 
@@ -45,21 +65,200 @@ const App = () => {
         name: "212 VIP ROSÉ",
         category: "Feminino",
         price: 999,
-        image: [femum, femdois],
+        image: [femum, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
+
+      {
+        id: 122,
+        name: "DOLCE & GABBANA",
+        category: "Masculino",
+        price: 999,
+        image: [dolcemas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 134,
+        name: "BLEU de CHANEL",
+        category: "Masculino",
+        price: 999,
+        image: [bleumas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 111,
+        name: "SILVER SCENT",
+        category: "Masculino",
+        price: 999,
+        image: [silvermas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 231,
+        name: "POLO SPORT",
+        category: "Masculino",
+        price: 999,
+        image: [polomasc, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 3331,
+        name: "TOM FORD",
+        category: "Masculino",
+        price: 999,
+        image: [tomfordmas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 1345,
+        name: "212 VIP ",
+        category: "Feminino",
+        price: 999,
+        image: [tandtvipfem, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 666,
+        name: "PHANTOM",
+        category: "Masculino",
+        price: 999,
+        image: [phantommas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 1222,
+        name: "MYWAY",
+        category: "Feminino",
+        price: 999,
+        image: [mywayfem, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 33311,
+        name: "l`INTERDIT",
+        category: "Feminino",
+        price: 999,
+        image: [linterditofem, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 4444,
+        name: "Jo Malone",
+        category: "Feminino",
+        price: 999,
+        image: [jomalonefem, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 44445544,
+        name: "POLO RALPH LAUREN",
+        category: "Masculino",
+        price: 999,
+        image: [poloverde, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 55555,
+        name: "JeanPaul GAULTIER",
+        category: "Masculino",
+        price: 999,
+        image: [jeanpaulmas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 6666,
+        name: "GOOD GIRL",
+        category: "Feminino",
+        price: 999,
+        image: [goodgirlfem, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 7777,
+        name: "BAD BOY",
+        category: "Masculino",
+        price: 999,
+        image: [badboymas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+      {
+        id: 99999,
+        name: "AZZARO",
+        category: "masculino",
+        price: 999,
+        image: [azzaromas, cinquentaml, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+
+      {
+        id: 100,
+        name: "Kenzo",
+        category: "Feminino",
+        price: 999,
+        image: [femdezesseis, cinquentaml, femquize, cemml],
+        variants: [
+          { size: "100ml", price: 90 },
+          { size: "50ml", price: 65 },
+        ],
+      },
+
       {
         id: 2,
         name: "LADY MILLION",
         category: "Feminino",
         price: 645,
-        image: [femdois],
+        image: [femdois, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -67,10 +266,10 @@ const App = () => {
         name: "212 SEXY",
         category: "Feminino",
         price: 499,
-        image: [femtrez],
+        image: [femtrez, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -78,10 +277,10 @@ const App = () => {
         name: "LIGHT BLUE",
         category: "Feminino",
         price: 599,
-        image: [femquatro],
+        image: [femquatro, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -89,10 +288,10 @@ const App = () => {
         name: "OLIMPÍA",
         category: "Feminino",
         price: 599,
-        image: [femcinco],
+        image: [femcinco, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -100,10 +299,10 @@ const App = () => {
         name: "VALAIA",
         category: "Feminino",
         price: 599,
-        image: [femseis],
+        image: [femseis, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -111,10 +310,10 @@ const App = () => {
         name: "BLACK XS",
         category: "Feminino",
         price: 599,
-        image: [femsete],
+        image: [femsete, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -122,10 +321,10 @@ const App = () => {
         name: "ANGEL",
         category: "Feminino",
         price: 599,
-        image: [femoito],
+        image: [femoito, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -133,10 +332,10 @@ const App = () => {
         name: "COCO MADEMOISELLE",
         category: "Feminino",
         price: 599,
-        image: [femnove],
+        image: [femnove, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -144,11 +343,11 @@ const App = () => {
         name: "JADORE",
         category: "Feminino",
         price: 599,
-        image: [femdez],
+        image: [femdez, cinquentaml, cemml],
 
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -156,10 +355,10 @@ const App = () => {
         name: "GOOD GIRL",
         category: "Feminino",
         price: 599,
-        image: [femonze],
+        image: [femonze, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -167,23 +366,23 @@ const App = () => {
         name: "SCANDAL",
         category: "Feminino",
         price: 599,
-        image: [femdoze],
+        image: [femdoze, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
 
       {
         id: 13,
         name: "hypnôse",
-        category: "Masculino",
+        category: "Feminino",
         price: 799,
-        image: [masum],
+        image: [masum, cinquentaml, cemml],
 
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -191,21 +390,21 @@ const App = () => {
         name: "212 VIP BLACK",
         category: "Masculino",
         price: 599,
-        image: [masdois],
+        image: [masdois, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
         id: 15,
         name: "ARMANI code",
-        category: "Masculino",
+        category: "Feminino",
         price: 599,
-        image: [mastrez],
+        image: [mastrez, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -213,10 +412,10 @@ const App = () => {
         name: "FERRARI BLACK scuderia",
         category: "Masculino",
         price: 599,
-        image: [masquatro],
+        image: [masquatro, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -224,21 +423,21 @@ const App = () => {
         name: "1 Million",
         category: "Masculino",
         price: 699,
-        image: [mascinco],
+        image: [mascinco, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
         id: 18,
-        name: "Maison Francis kurkdjian",
+        name: "Baccarat Rouge",
         category: "Masculino",
         price: 619,
-        image: [masseis],
+        image: [masseis, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -246,10 +445,10 @@ const App = () => {
         name: "SAUVAGE",
         category: "Masculino",
         price: 619,
-        image: [massete],
+        image: [massete, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -257,10 +456,10 @@ const App = () => {
         name: "INVICTUS",
         category: "Masculino",
         price: 619,
-        image: [masoito],
+        image: [masoito, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -268,10 +467,10 @@ const App = () => {
         name: "POLO",
         category: "Masculino",
         price: 619,
-        image: [masnove],
+        image: [masnove, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -279,11 +478,11 @@ const App = () => {
         name: "HUGO BOSS",
         category: "Masculino",
         price: 619,
-        image: [masdez],
+        image: [masdez, cinquentaml, cemml],
 
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -291,10 +490,10 @@ const App = () => {
         name: "PEGASUS EXCLUSIF",
         category: "Masculino",
         price: 619,
-        image: [masonze],
+        image: [masonze, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
       {
@@ -302,10 +501,10 @@ const App = () => {
         name: "212 VIP",
         category: "Masculino",
         price: 619,
-        image: [masdoze],
+        image: [masdoze, cinquentaml, cemml],
         variants: [
           { size: "100ml", price: 90 },
-          { size: "50ml", price: 60 },
+          { size: "50ml", price: 65 },
         ],
       },
     ];

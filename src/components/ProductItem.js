@@ -4,102 +4,101 @@ const ProductItem = ({ product, addToCart }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [magnifierPos, setMagnifierPos] = useState({ x: 0, y: 0 });
   const [showMagnifier, setShowMagnifier] = useState(false);
-  const [selectedSize, setSelectedSize] = useState(product.variants[0].size); // Tamanho padrão
+  const [selectedSize, setSelectedSize] = useState(product.variants[0].size);
+  const [isExpanded, setIsExpanded] = useState(false);
   const magnifierRef = useRef(null);
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === product.image.length - 1 ? 0 : prevIndex + 1
+    setCurrentImageIndex((prev) =>
+      prev === product.image.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? product.image.length - 1 : prevIndex - 1
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? product.image.length - 1 : prev - 1
     );
   };
 
   const handleMouseMove = (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    if (!isExpanded) return;
+
+    const { left, top } = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - left;
+    const y = e.clientY - top;
     setMagnifierPos({ x, y });
 
-    const img = e.target;
-    const zoomLevel = 2;
-    const magnifierSize = 100;
-    const bgX = (x * zoomLevel - magnifierSize / 2) * -1;
-    const bgY = (y * zoomLevel - magnifierSize / 2) * -1;
-
     if (magnifierRef.current) {
+      const zoomLevel = 2;
+      const magnifierSize = 150;
+      const bgX = (x * zoomLevel - magnifierSize / 2) * -1;
+      const bgY = (y * zoomLevel - magnifierSize / 2) * -1;
+
       magnifierRef.current.style.backgroundImage = `url(${product.image[currentImageIndex]})`;
-      magnifierRef.current.style.backgroundSize = `${img.width * zoomLevel}px ${
-        img.height * zoomLevel
-      }px`;
+      magnifierRef.current.style.backgroundSize = `${
+        e.currentTarget.offsetWidth * zoomLevel
+      }px ${e.currentTarget.offsetHeight * zoomLevel}px`;
       magnifierRef.current.style.backgroundPosition = `${bgX}px ${bgY}px`;
     }
   };
 
-  const handleMouseEnter = () => setShowMagnifier(true);
-  const handleMouseLeave = () => setShowMagnifier(false);
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+    setShowMagnifier(false);
+  };
 
   const handleAddToCart = () => {
     addToCart(product, selectedSize);
   };
 
-  if (
-    !product.image ||
-    !Array.isArray(product.image) ||
-    product.image.length === 0
-  ) {
-    return (
-      <div className="product-item">
-        <p>Imagem não disponível</p>
-        <h3>{product.name}</h3>
-        <p>{product.category}</p>
-        <select
-          value={selectedSize}
-          onChange={(e) => setSelectedSize(e.target.value)}
-        >
-          {product.variants.map((variant) => (
-            <option key={variant.size} value={variant.size}>
-              {variant.size} - R${variant.price.toFixed(2)}
-            </option>
-          ))}
-        </select>
-        <button className="add-to-cart-btn" onClick={handleAddToCart}>
-          Adicionar ao Carrinho
-        </button>
-      </div>
-    );
-  }
-
   return (
     <div className="product-item">
       <div className="carousel">
-        <button onClick={prevImage}>{"<"}</button>
         <div
           className="image-container"
+          onClick={toggleExpand}
           onMouseMove={handleMouseMove}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => isExpanded && setShowMagnifier(true)}
+          onMouseLeave={() => setShowMagnifier(false)}
         >
           <img
             src={product.image[currentImageIndex]}
-            alt={`${product.name} ${currentImageIndex + 1}`}
+            alt={`${product.name} - ${currentImageIndex + 1}/${
+              product.image.length
+            }`}
           />
-          <div
-            ref={magnifierRef}
-            className="magnifier"
-            style={{
-              left: `${magnifierPos.x - 50}px`,
-              top: `${magnifierPos.y - 50}px`,
-              visibility: showMagnifier ? "visible" : "hidden",
-            }}
-          />
+
+          {isExpanded && (
+            <div
+              ref={magnifierRef}
+              className="magnifier"
+              style={{
+                left: `${magnifierPos.x - 75}px`,
+                top: `${magnifierPos.y - 75}px`,
+                display: showMagnifier ? "block" : "none",
+              }}
+            />
+          )}
         </div>
-        <button onClick={nextImage}>{">"}</button>
       </div>
+
+      {/* Miniaturas sem botões de navegação */}
+      {product.image.length > 1 && (
+        <div className="thumbnails">
+          {product.image.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Thumbnail ${index + 1}`}
+              className={`thumbnail ${
+                index === currentImageIndex ? "active" : ""
+              }`}
+              onClick={() => setCurrentImageIndex(index)}
+            />
+          ))}
+        </div>
+      )}
+
       <h3>{product.name}</h3>
       <p>{product.category}</p>
       <select
@@ -115,6 +114,42 @@ const ProductItem = ({ product, addToCart }) => {
       <button className="add-to-cart-btn" onClick={handleAddToCart}>
         Adicionar ao Carrinho
       </button>
+
+      {/* Modal de imagem expandida */}
+      {isExpanded && (
+        <div className="image-modal" onClick={toggleExpand}>
+          <div className="modal-content">
+            <img
+              src={product.image[currentImageIndex]}
+              alt={`Zoom ${product.name}`}
+              onClick={(e) => e.stopPropagation()}
+            />
+            {product.image.length > 1 && (
+              <div className="modal-nav">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prevImage();
+                  }}
+                >
+                  &lt;
+                </button>
+                <span>
+                  {currentImageIndex + 1}/{product.image.length}
+                </span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextImage();
+                  }}
+                >
+                  &gt;
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
