@@ -101,16 +101,25 @@ const ProductItem = ({ product, addToCart }) => {
 
       <h3>{product.name}</h3>
       <p>{product.category}</p>
-      <select
-        value={selectedSize}
-        onChange={(e) => setSelectedSize(e.target.value)}
-      >
-        {product.variants.map((variant) => (
-          <option key={variant.size} value={variant.size}>
-            {variant.size} - R${variant.price.toFixed(2)}
-          </option>
-        ))}
-      </select>
+      <div className="variation-section">
+        <p className="variation-label">VARIAÇÃO</p>
+        <div className="size-options">
+          {product.variants.map((variant) => (
+            <label key={variant.size} className="size-option">
+              <input
+                type="radio"
+                name={`size-${product.id}`}
+                value={variant.size}
+                checked={selectedSize === variant.size}
+                onChange={() => setSelectedSize(variant.size)}
+              />
+              <span className="size-option-button">
+                {variant.size} - R${variant.price.toFixed(2)}
+              </span>
+            </label>
+          ))}
+        </div>
+      </div>
       <button className="add-to-cart-btn" onClick={handleAddToCart}>
         Adicionar ao Carrinho
       </button>

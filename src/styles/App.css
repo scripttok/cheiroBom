@@ -403,3 +403,54 @@ footer {
   display: none;
   z-index: 10;
 }
+
+/* Adicione esses estilos ao seu arquivo CSS existente */
+
+.variation-section {
+  margin: 15px 0;
+}
+
+.variation-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.size-option {
+  position: relative;
+}
+
+.size-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.size-option-button {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.size-option input[type="radio"]:checked + .size-option-button {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.size-option-button:hover {
+  border-color: #999;
+}
+
+/* Mantenha os estilos existentes para o restante do componente */
