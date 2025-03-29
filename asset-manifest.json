@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cheiroBom/static/css/main.1b5f4432.css",
-    "main.js": "/cheiroBom/static/js/main.01ca5c01.js",
+    "main.css": "/cheiroBom/static/css/main.7a31fcb4.css",
+    "main.js": "/cheiroBom/static/js/main.ad5ae7a3.js",
     "static/media/cinquentaml.jpg": "/cheiroBom/static/media/cinquentaml.80145d1e4f304d570f4b.jpg",
     "static/media/cemml.jpg": "/cheiroBom/static/media/cemml.04c8a8952442262b6975.jpg",
     "static/media/femdezesseis.jpg": "/cheiroBom/static/media/femdezesseis.e71de207a86153526193.jpg",
@@ -46,11 +46,11 @@
     "static/media/femquize.jpg": "/cheiroBom/static/media/femquize.9d9e1c1ed3cde905f5ac.jpg",
     "static/media/bleumas.jpg": "/cheiroBom/static/media/bleumas.4fdd842169c23bb8cf94.jpg",
     "index.html": "/cheiroBom/index.html",
-    "main.1b5f4432.css.map": "/cheiroBom/static/css/main.1b5f4432.css.map",
-    "main.01ca5c01.js.map": "/cheiroBom/static/js/main.01ca5c01.js.map"
+    "main.7a31fcb4.css.map": "/cheiroBom/static/css/main.7a31fcb4.css.map",
+    "main.ad5ae7a3.js.map": "/cheiroBom/static/js/main.ad5ae7a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b5f4432.css",
-    "static/js/main.01ca5c01.js"
+    "static/css/main.7a31fcb4.css",
+    "static/js/main.ad5ae7a3.js"
   ]
 }
